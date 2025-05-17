@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4));
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.hero-cta {
+  position: absolute;
+  text-align: center;
+  color: #FFFDFD;
+  z-index: 2;
+  max-width: 800px;
+  width: 90%;
+  padding: 2rem;
+}
+
+.hero-cta h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-cta p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.datepicker-section {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-button {
+  background-color: #E4B15A;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: #FFFDFD;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #D8A04A;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #E4B15A, #D89A3C);
+  color: #FFFDFD;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #D8A04A, #C78B2E);
+  transform: translateY(-3px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 500px;
+  }
+
+  .hero-cta h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-cta p {
+    font-size: 1.2rem;
+  }
+  
+  .search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 450px;
+  }
+
+  .hero-cta {
+    padding: 1.5rem;
+  }
+
+  .hero-cta h1 {
+    font-size: 2rem;
+  }
+
+  .hero-cta p {
+    font-size: 1.1rem;
+  }
+
+  .datepicker-section {
+    padding: 1rem;
+  }
+}
